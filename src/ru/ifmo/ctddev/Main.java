@@ -52,6 +52,10 @@ public class Main {
         optimizationMethods.add(new MemeticAlgorithm());
         optimizationMethods.add(new FireflyAlgorithm());
         optimizationMethods.add(new GlowwormSwarm());
+        optimizationMethods.add(new PatternSearch());
+        optimizationMethods.add(new LocalUnimodalSampling());
+        optimizationMethods.add(new LuusJaakola());
+        optimizationMethods.add(new SimulatedAnnealing());
         for (Function<double[], Double> f : testFunctions) {
             for (OptimizationMethod om : optimizationMethods) {
                 OptimizationMethod.OptimizationResult result = om.optimize(f, 2, true);
